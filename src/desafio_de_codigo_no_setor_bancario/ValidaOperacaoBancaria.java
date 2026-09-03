@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 public class ValidaOperacaoBancaria {
 
-    private static final String WELCOME_MESAGE = "Validação de Operação Bancária";
+    private static final String WELCOME_MESSAGE = "Validação de Operação Bancária";
 
     static void main(String[] args) {
 
         var scanner = new Scanner(System.in);
-        System.out.println(WELCOME_MESAGE);
+        System.out.println(WELCOME_MESSAGE);
 
 
         System.out.println("Informe a operação desejada: ");
