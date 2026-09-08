@@ -4,7 +4,7 @@ package fundamentos;
 
 import java.util.Scanner;
 
-public class Exercicio4DiferencaIdade {
+public class exercicio4_diferenca_idade {
 
     private static final String WELCOME_MESSAGE = "Cálculo de diferença de idade entre duas pessoas.";
 

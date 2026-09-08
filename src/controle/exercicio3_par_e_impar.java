@@ -4,7 +4,7 @@ package controle;
 
 import java.util.Scanner;
 
-public class Exercicio3ParEImpar {
+public class exercicio3_par_e_impar {
 
     private static final String WELCOME_MESSAGE = "Bem vindo ao *Par ou Ímpar?*";
 

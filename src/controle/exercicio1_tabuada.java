@@ -4,7 +4,7 @@ package controle;
 
 import java.util.Scanner;
 
-public class Exercicio1Tabuada {
+public class exercicio1_tabuada {
 
     private static final String WELCOME_MESSAGE = "Bem vindo ao sistema de tabuada.";
 

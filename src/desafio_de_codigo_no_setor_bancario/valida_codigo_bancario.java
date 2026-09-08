@@ -4,7 +4,7 @@ package desafio_de_codigo_no_setor_bancario;
 
 import java.util.Scanner;
 
-public class ValidaCodigoBancario {
+public class valida_codigo_bancario {
 
     private static final String WELCOME_MESSAGE = "Validação de Código Bancário";
 
