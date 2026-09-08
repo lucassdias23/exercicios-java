@@ -1,4 +1,4 @@
-package programacao_poo;
+package programacao_poo.Exercicio3BanhoPetShop;
 
 import java.util.Scanner;
 
