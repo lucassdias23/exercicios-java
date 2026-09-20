@@ -5,7 +5,7 @@ package controle;
 
 import java.util.Scanner;
 
-public class exercicio4_divisao {
+public class Exercicio4Divisao {
 
     private static final String WELCOME_MESSAGE = "Bem vindo ao Divisão";
 

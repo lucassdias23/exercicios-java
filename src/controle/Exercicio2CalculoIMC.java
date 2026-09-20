@@ -4,7 +4,7 @@ package controle;
 
 import java.util.Scanner;
 
-public class exercicio2_calculoimc {
+public class Exercicio2CalculoIMC {
 
     private static final String WELCOME_MESSAGE = "Bem vindo ao sistema de cálculo de IMC";
 

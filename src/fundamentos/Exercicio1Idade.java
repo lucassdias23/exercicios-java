@@ -4,7 +4,7 @@ package fundamentos;
 
 import java.util.Scanner;
 
-public class exercicio1_idade {
+public class Exercicio1Idade {
 
     private static final String WELCOME_MESSAGE = "Olá, vamos calcular a sua idade?";
 

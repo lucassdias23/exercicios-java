@@ -5,7 +5,7 @@ package fundamentos;
 
 import java.util.Scanner;
 
-public class exercicio3_area_retangulo {
+public class Exercicio3AreaRetangulo {
 
     private static final String WELCOME_MESSAGE = "Calculando a área de um retângulo.";
 

@@ -1,4 +1,4 @@
-package programacao_poo.Exercicio3BanhoPetShop;
+package programacao_poo.exercicio3_banho_petshop;
 
 public class PetMachine {
 

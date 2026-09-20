@@ -4,7 +4,7 @@ package fundamentos;
 
 import java.util.Scanner;
 
-public class exercicio2_area_quadrado {
+public class Exercicio2AreaQuadrado {
 
     private static final String WELCOME_MESSAGE = "Calculando a área de um quadrado.";
 

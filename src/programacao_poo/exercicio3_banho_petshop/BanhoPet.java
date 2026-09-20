@@ -1,4 +1,4 @@
-package programacao_poo.Exercicio3BanhoPetShop;
+package programacao_poo.exercicio3_banho_petshop;
 
 import java.util.Scanner;
 
@@ -24,7 +24,7 @@ import java.util.Scanner;
 //A limpeza da máquina ira consumir 3 litros de água e 1 litro de shampoo;
 //O abastecimento de água e shampoo deve permitir 2 litros por vez que for acionado;
 
-public class banhoPet {
+public class BanhoPet {
 
     private static String WELCOME_MESSAGE = "Olá, bem vindo ao serviço de Banho & Tosa \n \nEscolha uma das opções: \n";
 
