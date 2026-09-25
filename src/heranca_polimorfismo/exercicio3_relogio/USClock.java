@@ -1,6 +1,6 @@
 package heranca_polimorfismo.exercicio3_relogio;
 
-public non-sealed class USClock extends Clock{
+public non-sealed class USClock extends Clock {
 
     private String periodIndicator;
 

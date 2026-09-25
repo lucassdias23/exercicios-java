@@ -1,6 +1,6 @@
 package heranca_polimorfismo.exercicio3_relogio;
 
-public sealed abstract class Clock permits BRLClock, USClock{
+public sealed abstract class Clock permits BRLClock, USClock {
 
     protected int hour;
     protected int minute;

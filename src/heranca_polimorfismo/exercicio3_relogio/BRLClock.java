@@ -20,6 +20,7 @@ public non-sealed class BRLClock extends Clock {
                 }
             }
             case BRLClock brlclock -> this.hour = brlclock.getHour();
+
         }
 
         return this;
