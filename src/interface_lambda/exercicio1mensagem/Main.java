@@ -1,5 +1,7 @@
 package interface_lambda.exercicio1mensagem;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -9,59 +11,43 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println(WELCOME_MESSAGE);
-        System.out.println("Escolha uma opção:\n");
 
         var scanner = new Scanner(System.in);
 
-        int option;
+        Map<Integer, ServicoMensagem> servicosMap = new HashMap<>();
 
-        ServicoMensagem enviarMensagem;
+        servicosMap.put(1, new SmsService()::enviar);
+        servicosMap.put(2, new Email()::enviar);
+        servicosMap.put(3, new RedesSociais()::enviar);
+        servicosMap.put(4, new WhatsApp()::enviar);
 
         while(true){
+            System.out.println("\nEscolha uma opção:\n");
             System.out.println("1. Enviar promoção por SMS");
             System.out.println("2. Enviar promoção por Email");
             System.out.println("3. Enviar promoção por Redes Sociais");
             System.out.println("4. Enviar promoção por WhatsApp");
             System.out.println("5. Sair\n");
-            option = scanner.nextInt();
 
-            if (option == 1){
-                enviarMensagem = enviarSMS();
-            } else if (option == 2){
-                enviarMensagem = enviarEmail();
-            } else if (option == 3){
-                enviarMensagem = enviarRedesSociais();
-            } else if (option == 4) {
-                enviarMensagem = enviarWhatsApp();
-            } else if (option == 5){
+            int option = scanner.nextInt();
+
+            if (option == 5) {
                 System.out.println("Saindo do sistema... Até logo!");
                 scanner.close();
                 break;
+            }
+
+            ServicoMensagem servicoMensagem = servicosMap.get(option);
+
+            if(servicoMensagem != null){
+                servicoMensagem.enviar("A mensagem promocional foi enviada com sucesso!\n");
             } else {
                 System.out.println("Opção inválida! Selecione uma opção válida do menu, e tente novamente.\n");
                 continue;
             }
 
-            enviarMensagem.enviar("A mensagem foi enviada!\n");
-
         }
 
-    }
-
-    private static ServicoMensagem enviarSMS(){
-        return new SmsService();
-    }
-
-    private static ServicoMensagem enviarEmail(){
-        return new Email();
-    }
-
-    private static ServicoMensagem enviarRedesSociais(){
-        return new RedesSociais();
-    }
-
-    private static ServicoMensagem enviarWhatsApp(){
-        return new WhatsApp();
     }
 
 }
