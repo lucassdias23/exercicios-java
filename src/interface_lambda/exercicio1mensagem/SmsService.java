@@ -1,0 +1,11 @@
+package interface_lambda.exercicio1mensagem;
+
+public class SmsService implements ServicoMensagem {
+
+    @Override
+    public void enviar(String mensagem) {
+        System.out.println("Enviando mensagem por SMS... \n" + mensagem);
+    }
+
+  }
+
