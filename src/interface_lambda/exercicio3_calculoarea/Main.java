@@ -1,41 +1,51 @@
 package interface_lambda.exercicio3_calculoarea;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.function.Supplier;
 
 public class Main {
 
-    private final static Scanner scanner = new Scanner(System.in);
+    private final static String WELCOME_MESSAGE = "=== CALCULADOR DE ÁREA GEOMÉTRICA ===\n";
 
+    private final static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        int option;
+        System.out.println(WELCOME_MESSAGE);
 
-        GeometricForm geometricForm;
+        Map<Integer, Supplier<GeometricForm>> formasMap = Map.of(
+                1, Main::createSquare,
+                2, Main::createRectangle,
+                3, Main::createCircle
+        );
 
         while (true) {
-            System.out.println("Escolha a forma geométrica para calcular a área");
+            System.out.println("Escolha a forma geométrica para calcular a área\n");
             System.out.println("1. Quadrado");
             System.out.println("2. Retângulo");
             System.out.println("3. Ciruclo");
-            System.out.println("4. Sair");
-            option = scanner.nextInt();
+            System.out.println("4. Sair\n");
 
-            if (option == 1) {
-                geometricForm = createSquare();
-            } else if (option == 2) {
-                geometricForm = createRectangle();
-            } else if (option == 3) {
-                geometricForm = createCircle();
-                if (option == 4) {
-                    break;
-                }
-            } else {
-                System.out.println("Opção inválida.");
-                continue;
+            int option = scanner.nextInt();
+
+            if (option == 4) {
+                System.out.println("Saindo do sistema... Até logo!");
+                break;
             }
-            System.out.println("O resultado do cálculo da área foi de " + geometricForm.getArea());
+
+            Supplier<GeometricForm> forma = formasMap.get(option);
+
+            if (forma != null) {
+                GeometricForm geometricForm = forma.get();
+                System.out.println("O resultado do cálculo da área foi de: " + geometricForm.getArea());
+            } else {
+                System.out.println("Opção inválida! Tente novamente.");
+            }
         }
+
+        scanner.close();
     }
 
     private static GeometricForm createSquare() {

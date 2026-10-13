@@ -7,3 +7,5 @@ public record Square(double side) implements GeometricForm {
         return side * side;
     }
 }
+
+
